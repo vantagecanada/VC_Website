@@ -1,4 +1,6 @@
-/* Reset */
+/* ==========================
+   Reset & Base
+========================== */
 
 * {
     margin: 0;
@@ -17,7 +19,22 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Hero */
+:root {
+    --background: #080808;
+    --surface: #111111;
+    --surface-hover: #181818;
+    --text: #f5f5f5;
+    --text-muted: #a6a6a6;
+    --accent: #e31b36;
+    --border: #292929;
+    --radius: 8px;
+    --transition: 0.2s ease;
+}
+
+
+/* ==========================
+   Hero
+========================== */
 
 .hero {
     min-height: 70vh;
@@ -31,73 +48,109 @@ body {
     font-size: clamp(48px, 9vw, 110px);
     font-weight: 700;
     letter-spacing: -0.065em;
-    text-align: center;
     line-height: 1.1;
+    text-align: center;
 }
 
-/* About Us */
 
-.about {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 80px 30px 120px;
-    border-top: 1px solid #292929;
-}
+/* ==========================
+   Shared Section Headings
+========================== */
 
 .about h2,
 .visit h2 {
     margin-bottom: 25px;
     font-size: 14px;
     font-weight: 600;
-    color: #e31b36;
+    color: var(--accent);
+}
+
+
+/* ==========================
+   About Us
+========================== */
+
+.about {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 30px 120px;
+    border-top: 1px solid var(--border);
 }
 
 .about p {
     max-width: 650px;
+    color: var(--text-muted);
     font-size: 20px;
     line-height: 1.8;
-    color: #a6a6a6;
 }
 
-/* Visit Us */
+
+/* ==========================
+   Visit Us
+========================== */
 
 .visit {
     max-width: 760px;
     margin: 0 auto;
     padding: 60px 30px 100px;
-    border-top: 1px solid #292929;
+    border-top: 1px solid var(--border);
 }
 
 .social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
-    min-width: 140px;
-    padding: 14px 16px;
-    border: 1px solid #292929;
-    color: #f5f5f5;
+    gap: 20px;
+    min-height: 60px;
+    padding: 18px 20px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    color: var(--text);
     font-size: 14px;
+    font-weight: 500;
     text-decoration: none;
-    transition: border-color 0.2s, color 0.2s;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
 }
 
 .social-links a span {
-    color: #e31b36;
+    color: var(--accent);
+    transition: transform var(--transition);
 }
 
 .social-links a:hover {
-    border-color: #e31b36;
-    color: #e31b36;
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    color: var(--text);
+    transform: translateY(-3px);
 }
 
-/* Mobile */
+.social-links a:hover span {
+    transform: translate(2px, -2px);
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+
+/* ==========================
+   Mobile
+========================== */
 
 @media (max-width: 600px) {
     .hero {
@@ -121,10 +174,31 @@ body {
     }
 
     .social-links {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .social-links a {
-        width: 100%;
+        min-height: 56px;
+    }
+}
+
+
+/* ==========================
+   Reduced Motion
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .social-links a,
+    .social-links a span {
+        transition: none;
+    }
+
+    .social-links a:hover {
+        transform: none;
     }
 }
