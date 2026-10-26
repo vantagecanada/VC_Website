@@ -4,47 +4,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vantage Canada</title>
+    <title>Vantage Canada.</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <nav class="navbar">
-            <h2 class="logo">Vantage Canada</h2>
+    <!-- Navigation -->
+    <header class="header">
+        <a href="#" class="brand">
+            <span class="logo">Vantage Canada<span class="maple">✦</span></span>
+        </a>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#latest">News</a>
+            <a href="#latest">Features</a>
+            <a href="#latest">Videos</a>
+            <a href="#about">About</a>
         </nav>
+
+        <a href="#newsletter" class="header-button">Subscribe ↗</a>
     </header>
 
+
     <main>
-        <section class="hero" id="home">
-            <h1>Build Something Great.</h1>
 
-            <p>
-                A simple website to share your ideas with the world.
-            </p>
+        <!-- Featured Story -->
+        <section class="featured">
 
-            <a href="#about" class="button">Learn More</a>
+            <div class="featured-content">
+                <span class="category">THE CANADIAN STORY</span>
+
+                <h1>Canada's future is ours to build.</h1>
+
+                <p>
+                    The people, ideas, and businesses shaping the
+                    country we want to become.
+                </p>
+
+                <a href="#latest" class="button">
+                    Explore our stories →
+                </a>
+            </div>
+
+            <div class="featured-image">
+                <img
+                    src="https://images.unsplash.com/photo-1503614472-8c93d56cd7b7?auto=format&fit=crop&w=1600&q=85"
+                    alt="Mountain peaks and a turquoise lake in the Canadian Rockies"
+                >
+            </div>
+
         </section>
 
-        <section class="about" id="about">
-            <h2>About Us</h2>
+
+        <!-- Latest Stories -->
+        <section class="latest section-container" id="latest">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">THE LATEST</span>
+                    <h2>Ideas worth exploring.</h2>
+                </div>
+
+                <a href="#latest" class="text-link">All stories →</a>
+            </div>
+
+
+            <div class="story-grid">
+
+                <!-- Story 1 -->
+                <article class="story-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517090504586-fde19ea6066f?auto=format&fit=crop&w=800&q=80"
+                        alt="Toronto city skyline"
+                    >
+
+                    <div class="story-content">
+                        <span class="category">CANADA</span>
+
+                        <h3>
+                            What would it take to make Canada
+                            a world leader?
+                        </h3>
+
+                        <p>
+                            Examining the ideas, decisions, and
+                            ambitions that could shape our future.
+                        </p>
+
+                        <a href="#about" class="read-link">
+                            Read story →
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- Story 2 -->
+                <article class="story-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                        alt="Entrepreneurs working together"
+                    >
+
+                    <div class="story-content">
+                        <span class="category">BUSINESS</span>
+
+                        <h3>
+                            Meet the entrepreneurs building
+                            Canada's next generation of companies.
+                        </h3>
+
+                        <p>
+                            Inside the challenges, risks, and
+                            breakthroughs behind Canadian businesses.
+                        </p>
+
+                        <a href="#about" class="read-link">
+                            Read story →
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- Story 3 -->
+                <article class="story-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80"
+                        alt="Wind turbines generating clean energy"
+                    >
+
+                    <div class="story-content">
+                        <span class="category">INNOVATION</span>
+
+                        <h3>
+                            The technologies that could
+                            transform Canada's economy.
+                        </h3>
+
+                        <p>
+                            Exploring the people and breakthroughs
+                            creating opportunities for the future.
+                        </p>
+
+                        <a href="#about" class="read-link">
+                            Read story →
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Mission -->
+        <section class="mission" id="about">
+
+            <span class="eyebrow">WHY VANTAGE EXISTS</span>
+
+            <h2>
+                A better Canada doesn't happen by accident.
+            </h2>
 
             <p>
-                Welcome to my website. This is where I share my ideas,
-                projects, and work with the world.
+                We tell the stories of ambition, share the lessons
+                behind success and failure, and challenge Canadians
+                to build a stronger, more innovative nation.
             </p>
+
+            <a href="#newsletter" class="button button-light">
+                Join the movement →
+            </a>
+
         </section>
+
+
+        <!-- Newsletter -->
+        <section class="newsletter" id="newsletter">
+
+            <div>
+                <span class="eyebrow">THE VANTAGE BRIEFING</span>
+
+                <h2>Stay informed. Think bigger.</h2>
+
+                <p>
+                    Get our latest stories and ideas delivered
+                    straight to your inbox.
+                </p>
+            </div>
+
+            <form class="newsletter-form">
+                <label for="email" class="visually-hidden">
+                    Your email address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <button type="submit">Subscribe →</button>
+            </form>
+
+        </section>
+
     </main>
 
-    <footer id="contact">
-        <p>&copy; 2026 Vantage Canada. All rights unreserved.</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+            <a href="#" class="brand">
+                <span class="logo">VANTAGE<span class="maple">✦</span></span>
+                <span class="tagline">Stories. People. Canada.</span>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#latest">Stories</a>
+            <a href="#about">About</a>
+            <a href="#newsletter">Newsletter</a>
+        </div>
+
+        </p>
+
     </footer>
 
 </body>
