@@ -1,1 +1,1 @@
-Vantage Canada
+**Vantage Canada**
