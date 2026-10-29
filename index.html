@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Vantage Canada is a media brand dedicated to inspiring ambition, sharing Canadian stories, and building a stronger, more prosperous nation.">
+
     <title>Vantage Canada</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
+
         <!-- Hero -->
-        <section class="hero">
-            <h1>Vantage Canada</h1>
-        </section>
+        <header class="hero">
+            <a href="#home" class="logo-link" aria-label="Vantage Canada home">
+                <img src="logo.png" alt="Vantage Canada logo" class="logo">
+            </a>
+
+            <h1 id="home">Vantage Canada</h1>
+        </header>
 
         <!-- About Us -->
         <section class="about" id="about">
             <h2>About Us</h2>
+
             <p>
                 Vantage Canada is a media brand dedicated to inspiring
                 ambition, sharing the stories of our great Canadians,
@@ -27,28 +38,71 @@
         <!-- Our Vision -->
         <section class="about" id="vision">
             <h2>Our Vision</h2>
+
             <p>
                 To build a world-leading Canada where ambition,
                 innovation, and excellence drive our nation's future.
             </p>
         </section>
 
-        <!-- Visit Us -->
-        <section class="visit">
-            <h2>Visit Us</h2>
-            <div class="social-links">
+        <!-- Our Mission -->
+        <section class="about" id="mission">
+            <h2>Our Mission</h2>
 
-                <a href="https://www.x.com/Vantage_Can" target="_blank" rel="noopener noreferrer">
-                    X <span>↗</span>
-                </a>
-
-                <a href="https://www.youtube.com/@Vantage_Canada" target="_blank" rel="noopener noreferrer">
-                    YouTube <span>↗</span>
-                </a>
-
-            </div>
+            <p>
+                To tell compelling Canadian stories, highlight
+                exceptional people, and inspire Canadians to help
+                shape a stronger and more prosperous future.
+            </p>
         </section>
+
+        <!-- Our Values -->
+        <section class="about" id="values">
+            <h2>Our Values</h2>
+
+            <p>
+                Ambition, integrity, excellence, and a commitment
+                to Canada's future. We believe in the potential of
+                Canadians and the power of ideas to build a stronger nation.
+            </p>
+        </section>
+
+        <!-- Visit Us -->
+        <footer class="visit" id="visit">
+            <h2>Visit Us</h2>
+
+            <div class="social-links">
+                <a
+                    href="https://x.com/Vantage_Can"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Vantage Canada on X"
+                >
+                    <span class="social-name">X</span>
+                    <span class="social-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@Vantage_Canada"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Vantage Canada on YouTube"
+                >
+                    <span class="social-name">YouTube</span>
+                    <span class="social-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <p class="copyright">
+                &copy; <span id="year"></span> Vantage Canada. All rights reserved.
+            </p>
+        </footer>
+
     </main>
-    
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
 </body>
 </html>
