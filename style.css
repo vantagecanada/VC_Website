@@ -35,6 +35,12 @@ header {
     color: var(--accent);
 }
 
+.brand img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
 .hero {
     max-width: 1000px;
     min-height: 78vh;
