@@ -9,18 +9,13 @@
 }
 
 :root {
-    --background: #080808;
-    --surface: #111111;
-    --surface-hover: #181818;
-    --text: #f5f3ef;
-    --text-muted: #aaa7a1;
-    --accent: #c52b3d;
+    --background: #0b0b0b;
+    --surface: #121212;
+    --text: #f5f2ed;
+    --text-muted: #a5a19b;
+    --accent: #d9273e;
     --border: #292929;
-
-    --font: Baskerville, "Baskerville Old Face",
-            "Times New Roman", serif;
-
-    --content-width: 800px;
+    --content-width: 900px;
     --transition: 0.25s ease;
 }
 
@@ -29,188 +24,211 @@ html {
 }
 
 body {
+    font-family: Baskerville, "Baskerville Old Face",
+                 "Times New Roman", serif;
     background: var(--background);
     color: var(--text);
-    font-family: var(--font);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
 }
 
-::selection {
-    background: var(--accent);
-    color: #ffffff;
+a {
+    color: inherit;
 }
-
 
 /* ==========================
    Hero
 ========================== */
 
 .hero {
-    min-height: 75vh;
+    min-height: 82vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px 25px;
+    padding: 80px 24px;
     text-align: center;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: clamp(44px, 7vw, 88px);
+    font-size: clamp(3.5rem, 10vw, 8rem);
     font-weight: 400;
-    letter-spacing: -0.035em;
-    line-height: 1.1;
+    letter-spacing: -0.055em;
+    line-height: 1.05;
 }
 
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    margin: 32px auto 0;
+}
 
 /* ==========================
-   Section Headings
+   Shared Sections
 ========================== */
+
+.about,
+.visit {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 100px 40px;
+    border-top: 1px solid var(--border);
+}
 
 .about h2,
 .visit h2 {
     margin-bottom: 28px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
     color: var(--accent);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
 }
-
 
 /* ==========================
    About & Vision
 ========================== */
 
-.about {
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding: 75px 35px 95px;
-    border-top: 1px solid var(--border);
-}
-
 .about p {
-    max-width: 680px;
+    max-width: 700px;
     color: var(--text-muted);
-    font-size: clamp(19px, 2.2vw, 23px);
-    line-height: 1.9;
+    font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+    line-height: 1.8;
 }
 
+/* Give the vision section a distinct appearance */
+
+#vision {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+#vision p {
+    color: var(--text);
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    line-height: 1.45;
+    letter-spacing: -0.025em;
+}
 
 /* ==========================
    Visit Us
 ========================== */
 
 .visit {
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding: 60px 35px 100px;
-    border-top: 1px solid var(--border);
+    padding-bottom: 120px;
 }
 
 .social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .social-links a {
+    min-height: 76px;
+    padding: 22px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
 
-    min-width: 170px;
-    padding: 15px 18px;
-
-    background: transparent;
+    background: var(--surface);
     border: 1px solid var(--border);
 
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 0.9rem;
+    font-weight: 500;
     text-decoration: none;
 
     transition:
         background var(--transition),
         border-color var(--transition),
-        color var(--transition);
+        transform var(--transition);
 }
 
 .social-links a span {
     color: var(--accent);
+    font-size: 1.1rem;
     transition: transform var(--transition);
 }
 
 .social-links a:hover {
-    background: var(--surface);
+    background: #191919;
     border-color: var(--accent);
+    transform: translateY(-3px);
 }
 
 .social-links a:hover span {
-    transform: translate(2px, -2px);
+    transform: translate(3px, -3px);
 }
 
 .social-links a:focus-visible {
     outline: 2px solid var(--accent);
-    outline-offset: 4px;
+    outline-offset: 5px;
 }
 
+/* ==========================
+   Selection
+========================== */
+
+::selection {
+    background: var(--accent);
+    color: #ffffff;
+}
 
 /* ==========================
    Mobile
 ========================== */
 
 @media (max-width: 600px) {
-
     .hero {
-        min-height: 65vh;
-        padding: 50px 25px;
+        min-height: 72vh;
+        padding: 60px 24px;
     }
 
     .hero h1 {
-        font-size: clamp(42px, 10vw, 60px);
-        letter-spacing: -0.025em;
+        font-size: clamp(3rem, 13vw, 5rem);
     }
 
-    .about {
-        padding: 55px 25px 70px;
+    .about,
+    .visit {
+        padding: 70px 24px;
     }
 
-    .about h2,
-    .visit h2 {
-        margin-bottom: 22px;
+    #vision {
+        padding-top: 60px;
+        padding-bottom: 80px;
     }
 
     .about p {
-        font-size: 18px;
-        line-height: 1.85;
+        font-size: 1.15rem;
     }
 
-    .visit {
-        padding: 50px 25px 75px;
+    #vision p {
+        font-size: 1.8rem;
     }
 
     .social-links {
-        flex-direction: column;
-        gap: 10px;
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .social-links a {
-        width: 100%;
-        min-height: 54px;
+        min-height: 66px;
     }
 }
-
 
 /* ==========================
    Reduced Motion
 ========================== */
 
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
@@ -218,6 +236,8 @@ body {
     *,
     *::before,
     *::after {
-        transition: none !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
