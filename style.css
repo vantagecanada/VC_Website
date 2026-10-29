@@ -33,12 +33,7 @@ header {
 
 .brand span {
     color: var(--accent);
-}
 
-.brand img {
-    display: block;
-    width: 180px;
-    height: auto;
 }
 
 .hero {
