@@ -6,10 +6,11 @@
 
 :root {
     --background: #080808;
-    --text: #f5f2ed;
-    --muted: #a5a19a;
-    --accent: #d9273e;
+    --text: #ffffff;
+    --muted: #ffffff;
+    --accent: #ffffff;
     --border: #292929;
+
 }
 
 body {
