@@ -6,21 +6,28 @@
 
     <title>Vantage Canada</title>
 
-    <meta name="description" content="Vantage Canada is an educational media brand dedicated to inspiring ambition, sharing the stories of great Canadians, and building a stronger, more prosperous nation.">
+    <meta
+        name="description"
+        content="Vantage Canada is an educational media brand dedicated to inspiring ambition, sharing the stories of great Canadians, and building a stronger, more prosperous nation."
+    >
+
+    <meta name="theme-color" content="#080808">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="brand">VANTAGE <span>CANADA</span></a>
+        <a href="index.html" class="brand" aria-label="Vantage Canada">
+            VANTAGE <span>CANADA</span>
+        </a>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <p class="eyebrow">An Independent Canadian Media Brand</p>
 
-            <h1>
+            <h1 id="hero-title">
                 A stronger Canada<br>
                 <span>starts with ambition.</span>
             </h1>
@@ -41,15 +48,25 @@
     <footer>
         <span>&copy; 2026 Vantage Canada</span>
 
-        <div class="social-links">
-            <a href="https://x.com/Vantage_Can"
-               target="_blank"
-               rel="noopener noreferrer">X ↗</a>
+        <nav class="social-links" aria-label="Social media">
+            <a
+                href="https://x.com/Vantage_Can"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Vantage Canada on X (opens in a new tab)"
+            >
+                X ↗
+            </a>
 
-            <a href="https://www.youtube.com/@Vantage_Canada"
-               target="_blank"
-               rel="noopener noreferrer">YouTube ↗</a>
-        </div>
+            <a
+                href="https://www.youtube.com/@Vantage_Canada"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Subscribe to Vantage Canada on YouTube (opens in a new tab)"
+            >
+                YouTube ↗
+            </a>
+        </nav>
     </footer>
 
 </body>
