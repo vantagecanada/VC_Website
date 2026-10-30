@@ -1,2 +1,2 @@
-**Vantage Canada -- Website**
+**Vantage Canada — Concept Website**
 
