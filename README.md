@@ -1,1 +1,2 @@
-**Vantage Canada**
+**Vantage Canada -- Website**
+
